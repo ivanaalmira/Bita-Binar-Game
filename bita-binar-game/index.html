@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cermin Bita Binar - game refleksi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section id="start" class="screen on">
+    <div class="demo" aria-hidden="true">
+      <img src="assets/side_r.png" alt="">
+      <i></i>
+      <img src="assets/side_l.png" alt="">
+    </div>
+    <h1>Cermin Bita Binar</h1>
+    <p>Bantu Bita Binar menemukan bayangannya di bidang koordinat. Klik tempat bayangan itu muncul!</p>
+    <button id="play" class="btn big">Mulai main</button>
+    <small>Proyek Transformasi Geometri, Kelompok 2 PPLG</small>
+  </section>
+
+  <section id="map" class="screen">
+    <h2>Pilih level</h2>
+    <div id="levels"></div>
+    <button id="toStart" class="btn ghost">Kembali</button>
+  </section>
+
+  <section id="game" class="screen">
+    <div class="board"><canvas id="cv" width="840" height="672" aria-label="Bidang koordinat Kartesius"></canvas></div>
+    <aside>
+      <div class="hud"><b id="lvName"></b><span id="hearts"></span></div>
+      <div class="hud"><div class="dots" id="dots"></div><span id="score"></span></div>
+      <div class="talk">
+        <img id="face" src="assets/standing.png" alt="Bita Binar">
+        <div id="bubble" class="bubble"></div>
+      </div>
+      <p id="ask" class="ask"></p>
+      <p id="pick" class="pick"></p>
+      <div class="row">
+        <button id="hint" class="btn ghost">Petunjuk (-20)</button>
+        <button id="check" class="btn" disabled>Cek jawaban</button>
+      </div>
+      <button id="next" class="btn green" hidden>Lanjut</button>
+      <button id="menu" class="btn ghost small">Pilih level</button>
+    </aside>
+  </section>
+</main>
+
+<div id="modal" hidden><div class="card" id="mc"></div></div>
+<script src="game.js"></script>
+</body>
+</html>
