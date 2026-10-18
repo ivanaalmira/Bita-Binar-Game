@@ -69,12 +69,12 @@ aside{width:340px;flex:none;background:var(--cream);border-radius:22px;padding:1
 @keyframes pop{from{transform:scale(.85);opacity:0}}
 
 @media (max-width:900px){
-  #game{flex-direction:column;gap:8px;padding:8px;align-items:stretch;justify-content:flex-start;min-height:0}
+  #game.on{display:grid;grid-template-columns:minmax(0,1fr);align-content:start;align-items:start;gap:8px;padding:8px;min-height:0}
   aside{display:contents}
   .hud,.ask,.pick,.talk{background:var(--cream);border-radius:16px;padding:8px 14px}
-  .hud{order:1}.talk{order:2;padding:8px 10px}.ask{order:3;font-size:18px}
+  .hud{order:1;padding:6px 12px}.hud b,#hearts{font-size:17px}.ask{order:3;font-size:17px;padding:8px 12px}.talk{order:8;padding:8px 10px}
   .board{order:4;width:100%;flex:none}.pick{order:5;padding:6px 14px;font-size:13px}
-  .row{order:6}#next{order:7;width:100%}#menu{order:8;align-self:center}
+  .row{order:6}#next{order:7;width:100%}#menu{order:9;justify-self:center}
   .talk img{height:70px}.bubble{font-size:13.5px;padding:10px 12px}
   canvas{width:100%;border-width:4px;border-radius:16px}
   #levels{grid-template-columns:1fr 1fr;gap:10px}
